@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      豆瓣top250
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of subjects">
+      <a [routerLink]="['/tabs/mv/mvDetail',item.id]">
+        <ion-card class="welcome-card">
+          <img [src]="item.images.small" alt="" />
+          <ion-card-header>
+            <ion-card-subtitle>{{item.title}}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </a>
+    </ion-col>
+  </ion-row>
+</ion-content>
